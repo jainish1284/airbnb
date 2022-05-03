@@ -1,0 +1,30 @@
+<html>
+<head>
+    <title>AirBnb | Booked Properties</title>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container mx-auto">
+        <div class="flex">
+            <div class="row w-full text-center my-4">
+                <h1 class="text-4xl font-bold">AirBnb</h1>
+                <a href="/">Back</a>
+            </div>
+        </div>
+        <div class="flex flex-row flex-wrap">
+    
+    <div class="flex-auto w-1/4 rounded overflow-hidden shadow-lg m-2">
+        <div class="px-6 py-4">
+            <div class="font-bold text-xl mb-2">Booked Properties</div>
+        </div>
+        <div class="px-6 py-4">
+            {% for name in bookings %}
+                <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 m-1">{{ name }}</span>
+            {% endfor %}
+        </div>
+    </div>
+        </div>
+    </div>
+</body>
+</html>
